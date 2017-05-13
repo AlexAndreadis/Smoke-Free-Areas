@@ -7,12 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0280E5F6AD0924EC64F4B133 /* Pods_Smoke_Free_AreasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C288B08C3E2EBBDB7BB7CC /* Pods_Smoke_Free_AreasTests.framework */; };
+		3B1106FC1EBF5192007037EA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1106FB1EBF5192007037EA /* CoreLocation.framework */; };
+		3B1106FE1EBF799D007037EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B1106FD1EBF799D007037EA /* GoogleService-Info.plist */; };
 		3B4A2EC01EA78D2C00115F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A2EBF1EA78D2C00115F87 /* AppDelegate.swift */; };
 		3B4A2EC21EA78D2C00115F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A2EC11EA78D2C00115F87 /* ViewController.swift */; };
 		3B4A2EC51EA78D2C00115F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4A2EC31EA78D2C00115F87 /* Main.storyboard */; };
-		3B4A2EC71EA78D2C00115F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B4A2EC61EA78D2C00115F87 /* Assets.xcassets */; };
 		3B4A2ECA1EA78D2C00115F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4A2EC81EA78D2C00115F87 /* LaunchScreen.storyboard */; };
 		3B4A2ED51EA78D2C00115F87 /* Smoke_Free_AreasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A2ED41EA78D2C00115F87 /* Smoke_Free_AreasTests.swift */; };
+		3B4A2EE01EA78D6300115F87 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A2EDF1EA78D6300115F87 /* RatingControl.swift */; };
+		3B5BB51A1EAFF0C800CD6E5B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5BB5191EAFF0C800CD6E5B /* MapKit.framework */; };
+		3B9A2C2D1EC26E7B00CBE0FF /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A2C2C1EC26E7B00CBE0FF /* Locations.swift */; };
+		3B9A2C311EC27B2E00CBE0FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A2C2E1EC27B2E00CBE0FF /* Assets.xcassets */; };
+		3B9F41BA1EB0004A00DF6408 /* PlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F41B91EB0004A00DF6408 /* PlacesTableViewCell.swift */; };
+		3B9F41BC1EB000C200DF6408 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F41BB1EB000C200DF6408 /* Places.swift */; };
+		3B9F41BE1EB007DF00DF6408 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F41BD1EB007DF00DF6408 /* PlacesTableViewController.swift */; };
+		3BAB72061EC4C68900717C9E /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB72051EC4C68900717C9E /* mapViewController.swift */; };
+		3BB973DB1EB0A7590047C909 /* zazou.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3BB973DA1EB0A7590047C909 /* zazou.gpx */; };
+		692A67F80BD1DEDF209DEA54 /* Pods_Smoke_Free_Areas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60EF0450A6D63777A417A50 /* Pods_Smoke_Free_Areas.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +38,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B1106FB1EBF5192007037EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3B1106FD1EBF799D007037EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3B4A2EBC1EA78D2C00115F87 /* Smoke Free Areas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smoke Free Areas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4A2EBF1EA78D2C00115F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B4A2EC11EA78D2C00115F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B4A2EC41EA78D2C00115F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3B4A2EC61EA78D2C00115F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B4A2EC91EA78D2C00115F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B4A2ECB1EA78D2C00115F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B4A2ED01EA78D2C00115F87 /* Smoke Free AreasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smoke Free AreasTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4A2ED41EA78D2C00115F87 /* Smoke_Free_AreasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smoke_Free_AreasTests.swift; sourceTree = "<group>"; };
 		3B4A2ED61EA78D2C00115F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B4A2EDF1EA78D6300115F87 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		3B5BB5191EAFF0C800CD6E5B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3B9A2C2C1EC26E7B00CBE0FF /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		3B9A2C2E1EC27B2E00CBE0FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B9F41B91EB0004A00DF6408 /* PlacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesTableViewCell.swift; path = ../PlacesTableViewCell.swift; sourceTree = "<group>"; };
+		3B9F41BB1EB000C200DF6408 /* Places.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		3B9F41BD1EB007DF00DF6408 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		3BAB72051EC4C68900717C9E /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		3BB973DA1EB0A7590047C909 /* zazou.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = zazou.gpx; path = ../../Desktop/zazou.gpx; sourceTree = "<group>"; };
+		861EB76F45834BE40ED7ADC9 /* Pods-Smoke Free AreasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smoke Free AreasTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smoke Free AreasTests/Pods-Smoke Free AreasTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FCC7BDFC2B6891F56871C4A /* Pods-Smoke Free Areas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smoke Free Areas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smoke Free Areas/Pods-Smoke Free Areas.debug.xcconfig"; sourceTree = "<group>"; };
+		D2C288B08C3E2EBBDB7BB7CC /* Pods_Smoke_Free_AreasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smoke_Free_AreasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60EF0450A6D63777A417A50 /* Pods_Smoke_Free_Areas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smoke_Free_Areas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D67BD8D62D82AD5845416C2B /* Pods-Smoke Free Areas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smoke Free Areas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smoke Free Areas/Pods-Smoke Free Areas.release.xcconfig"; sourceTree = "<group>"; };
+		DB0980F50B968DAB86B57974 /* Pods-Smoke Free AreasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smoke Free AreasTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smoke Free AreasTests/Pods-Smoke Free AreasTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1106FC1EBF5192007037EA /* CoreLocation.framework in Frameworks */,
+				3B5BB51A1EAFF0C800CD6E5B /* MapKit.framework in Frameworks */,
+				692A67F80BD1DEDF209DEA54 /* Pods_Smoke_Free_Areas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0280E5F6AD0924EC64F4B133 /* Pods_Smoke_Free_AreasTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +91,12 @@
 		3B4A2EB31EA78D2B00115F87 = {
 			isa = PBXGroup;
 			children = (
+				3BB973DA1EB0A7590047C909 /* zazou.gpx */,
 				3B4A2EBE1EA78D2C00115F87 /* Smoke Free Areas */,
 				3B4A2ED31EA78D2C00115F87 /* Smoke Free AreasTests */,
 				3B4A2EBD1EA78D2C00115F87 /* Products */,
+				3B5BB5181EAFF0C800CD6E5B /* Frameworks */,
+				C816269B1FC10DE7B4E97F74 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +114,17 @@
 			children = (
 				3B4A2EBF1EA78D2C00115F87 /* AppDelegate.swift */,
 				3B4A2EC11EA78D2C00115F87 /* ViewController.swift */,
+				3BAB72051EC4C68900717C9E /* mapViewController.swift */,
+				3B9A2C2C1EC26E7B00CBE0FF /* Locations.swift */,
+				3B9F41BD1EB007DF00DF6408 /* PlacesTableViewController.swift */,
+				3B9F41B91EB0004A00DF6408 /* PlacesTableViewCell.swift */,
+				3B9F41BB1EB000C200DF6408 /* Places.swift */,
+				3B4A2EDF1EA78D6300115F87 /* RatingControl.swift */,
 				3B4A2EC31EA78D2C00115F87 /* Main.storyboard */,
-				3B4A2EC61EA78D2C00115F87 /* Assets.xcassets */,
+				3B9A2C2E1EC27B2E00CBE0FF /* Assets.xcassets */,
 				3B4A2EC81EA78D2C00115F87 /* LaunchScreen.storyboard */,
 				3B4A2ECB1EA78D2C00115F87 /* Info.plist */,
+				3B1106FD1EBF799D007037EA /* GoogleService-Info.plist */,
 			);
 			path = "Smoke Free Areas";
 			sourceTree = "<group>";
@@ -96,6 +138,28 @@
 			path = "Smoke Free AreasTests";
 			sourceTree = "<group>";
 		};
+		3B5BB5181EAFF0C800CD6E5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B1106FB1EBF5192007037EA /* CoreLocation.framework */,
+				3B5BB5191EAFF0C800CD6E5B /* MapKit.framework */,
+				D60EF0450A6D63777A417A50 /* Pods_Smoke_Free_Areas.framework */,
+				D2C288B08C3E2EBBDB7BB7CC /* Pods_Smoke_Free_AreasTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C816269B1FC10DE7B4E97F74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FCC7BDFC2B6891F56871C4A /* Pods-Smoke Free Areas.debug.xcconfig */,
+				D67BD8D62D82AD5845416C2B /* Pods-Smoke Free Areas.release.xcconfig */,
+				861EB76F45834BE40ED7ADC9 /* Pods-Smoke Free AreasTests.debug.xcconfig */,
+				DB0980F50B968DAB86B57974 /* Pods-Smoke Free AreasTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B4A2ED91EA78D2C00115F87 /* Build configuration list for PBXNativeTarget "Smoke Free Areas" */;
 			buildPhases = (
+				35E11B47C480910571BAB9E8 /* [CP] Check Pods Manifest.lock */,
 				3B4A2EB81EA78D2C00115F87 /* Sources */,
 				3B4A2EB91EA78D2C00115F87 /* Frameworks */,
 				3B4A2EBA1EA78D2C00115F87 /* Resources */,
+				AFC24FB422E0F8AC0070F1D7 /* [CP] Embed Pods Frameworks */,
+				E0C8A3AC7E85A9765AF56D7E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B4A2EDC1EA78D2C00115F87 /* Build configuration list for PBXNativeTarget "Smoke Free AreasTests" */;
 			buildPhases = (
+				27F0A0C43A5E8C9CEEB8AD7A /* [CP] Check Pods Manifest.lock */,
 				3B4A2ECC1EA78D2C00115F87 /* Sources */,
 				3B4A2ECD1EA78D2C00115F87 /* Frameworks */,
 				3B4A2ECE1EA78D2C00115F87 /* Resources */,
+				DDFA508DB80E671A9FBB7050 /* [CP] Embed Pods Frameworks */,
+				712CCF4EBDBDA951127F454E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +218,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = HE2K6QY4R6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3B4A2ECF1EA78D2C00115F87 = {
 						CreatedOnToolsVersion = 8.3;
@@ -182,8 +257,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B4A2ECA1EA78D2C00115F87 /* LaunchScreen.storyboard in Resources */,
-				3B4A2EC71EA78D2C00115F87 /* Assets.xcassets in Resources */,
+				3B1106FE1EBF799D007037EA /* GoogleService-Info.plist in Resources */,
 				3B4A2EC51EA78D2C00115F87 /* Main.storyboard in Resources */,
+				3BB973DB1EB0A7590047C909 /* zazou.gpx in Resources */,
+				3B9A2C311EC27B2E00CBE0FF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,13 +273,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		27F0A0C43A5E8C9CEEB8AD7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35E11B47C480910571BAB9E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		712CCF4EBDBDA951127F454E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smoke Free AreasTests/Pods-Smoke Free AreasTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFC24FB422E0F8AC0070F1D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smoke Free Areas/Pods-Smoke Free Areas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDFA508DB80E671A9FBB7050 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smoke Free AreasTests/Pods-Smoke Free AreasTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0C8A3AC7E85A9765AF56D7E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smoke Free Areas/Pods-Smoke Free Areas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B4A2EB81EA78D2C00115F87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9F41BC1EB000C200DF6408 /* Places.swift in Sources */,
 				3B4A2EC21EA78D2C00115F87 /* ViewController.swift in Sources */,
+				3B4A2EE01EA78D6300115F87 /* RatingControl.swift in Sources */,
+				3B9A2C2D1EC26E7B00CBE0FF /* Locations.swift in Sources */,
 				3B4A2EC01EA78D2C00115F87 /* AppDelegate.swift in Sources */,
+				3B9F41BA1EB0004A00DF6408 /* PlacesTableViewCell.swift in Sources */,
+				3B9F41BE1EB007DF00DF6408 /* PlacesTableViewController.swift in Sources */,
+				3BAB72061EC4C68900717C9E /* mapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +515,7 @@
 		};
 		3B4A2EDA1EA78D2C00115F87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FCC7BDFC2B6891F56871C4A /* Pods-Smoke Free Areas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HE2K6QY4R6;
@@ -352,6 +529,7 @@
 		};
 		3B4A2EDB1EA78D2C00115F87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D67BD8D62D82AD5845416C2B /* Pods-Smoke Free Areas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HE2K6QY4R6;
@@ -365,6 +543,7 @@
 		};
 		3B4A2EDD1EA78D2C00115F87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 861EB76F45834BE40ED7ADC9 /* Pods-Smoke Free AreasTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -380,6 +559,7 @@
 		};
 		3B4A2EDE1EA78D2C00115F87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB0980F50B968DAB86B57974 /* Pods-Smoke Free AreasTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -412,6 +592,7 @@
 				3B4A2EDB1EA78D2C00115F87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B4A2EDC1EA78D2C00115F87 /* Build configuration list for PBXNativeTarget "Smoke Free AreasTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +601,7 @@
 				3B4A2EDE1EA78D2C00115F87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
