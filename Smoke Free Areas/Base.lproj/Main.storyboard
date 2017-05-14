@@ -209,7 +209,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fhN-FY-ghJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="topRated" id="hXs-MB-4pD"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CCK-xy-2JR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CCK-xy-2JR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -228,7 +228,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bji-NI-cLM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="tabBarMap" id="qEb-80-5TB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZsP-hq-4db">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZsP-hq-4db">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
