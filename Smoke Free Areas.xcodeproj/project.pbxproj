@@ -16,6 +16,7 @@
 		3B4A2ECA1EA78D2C00115F87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4A2EC81EA78D2C00115F87 /* LaunchScreen.storyboard */; };
 		3B4A2ED51EA78D2C00115F87 /* Smoke_Free_AreasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A2ED41EA78D2C00115F87 /* Smoke_Free_AreasTests.swift */; };
 		3B4A2EE01EA78D6300115F87 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A2EDF1EA78D6300115F87 /* RatingControl.swift */; };
+		3B57175A1EC8911D00613128 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5717591EC8911D00613128 /* CommentsTableViewController.swift */; };
 		3B5BB51A1EAFF0C800CD6E5B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5BB5191EAFF0C800CD6E5B /* MapKit.framework */; };
 		3B9A2C2D1EC26E7B00CBE0FF /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9A2C2C1EC26E7B00CBE0FF /* Locations.swift */; };
 		3B9A2C311EC27B2E00CBE0FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9A2C2E1EC27B2E00CBE0FF /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		3B4A2ED41EA78D2C00115F87 /* Smoke_Free_AreasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smoke_Free_AreasTests.swift; sourceTree = "<group>"; };
 		3B4A2ED61EA78D2C00115F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B4A2EDF1EA78D6300115F87 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		3B5717591EC8911D00613128 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
 		3B5BB5191EAFF0C800CD6E5B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3B9A2C2C1EC26E7B00CBE0FF /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		3B9A2C2E1EC27B2E00CBE0FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				3B9F41B91EB0004A00DF6408 /* PlacesTableViewCell.swift */,
 				3B9F41BB1EB000C200DF6408 /* Places.swift */,
 				3B4A2EDF1EA78D6300115F87 /* RatingControl.swift */,
+				3B5717591EC8911D00613128 /* CommentsTableViewController.swift */,
 				3B4A2EC31EA78D2C00115F87 /* Main.storyboard */,
 				3B9A2C2E1EC27B2E00CBE0FF /* Assets.xcassets */,
 				3B4A2EC81EA78D2C00115F87 /* LaunchScreen.storyboard */,
@@ -379,6 +382,7 @@
 				3B9F41BA1EB0004A00DF6408 /* PlacesTableViewCell.swift in Sources */,
 				3B9F41BE1EB007DF00DF6408 /* PlacesTableViewController.swift in Sources */,
 				3BAB72061EC4C68900717C9E /* mapViewController.swift in Sources */,
+				3B57175A1EC8911D00613128 /* CommentsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
