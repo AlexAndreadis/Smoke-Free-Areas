@@ -64,6 +64,7 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Handle the text field’s user input through delegate callbacks.

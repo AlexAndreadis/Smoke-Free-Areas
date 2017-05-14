@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="761"/>
+            <point key="canvasLocation" x="2079" y="761"/>
         </scene>
         <!--Pick a place-->
         <scene sceneID="V5N-Uj-LaC">
@@ -131,35 +131,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sw-mI-xNE">
-                                <rect key="frame" x="164" y="64" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="" id="Yt1-aP-blk"/>
-                                </connections>
-                            </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HyV-KC-cr5">
-                                <rect key="frame" x="0.0" y="94" width="375" height="524"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HyV-KC-cr5" firstAttribute="top" secondItem="7Sw-mI-xNE" secondAttribute="bottom" id="66I-ES-ebq"/>
                             <constraint firstItem="HyV-KC-cr5" firstAttribute="leading" secondItem="vix-XV-18D" secondAttribute="leading" id="8hy-yg-8xy"/>
-                            <constraint firstItem="7Sw-mI-xNE" firstAttribute="centerX" secondItem="HyV-KC-cr5" secondAttribute="centerX" id="ERH-21-h8c"/>
-                            <constraint firstItem="7Sw-mI-xNE" firstAttribute="top" secondItem="G8m-h1-16b" secondAttribute="bottom" id="Ozl-aa-2XL"/>
                             <constraint firstAttribute="trailing" secondItem="HyV-KC-cr5" secondAttribute="trailing" id="WI7-L2-Wix"/>
+                            <constraint firstAttribute="trailing" secondItem="HyV-KC-cr5" secondAttribute="trailing" id="fB6-LQ-eGY"/>
+                            <constraint firstItem="HyV-KC-cr5" firstAttribute="top" secondItem="G8m-h1-16b" secondAttribute="bottom" id="gKA-O5-6ah"/>
+                            <constraint firstItem="HyV-KC-cr5" firstAttribute="leading" secondItem="vix-XV-18D" secondAttribute="leading" id="gyK-3u-Imz"/>
                             <constraint firstItem="hjd-pb-FFH" firstAttribute="top" secondItem="HyV-KC-cr5" secondAttribute="bottom" id="j2q-DT-YEg"/>
+                            <constraint firstItem="hjd-pb-FFH" firstAttribute="top" secondItem="HyV-KC-cr5" secondAttribute="bottom" id="wUi-eq-qF7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pick a place" id="Hfy-Z1-90l"/>
                     <connections>
                         <outlet property="mapView" destination="HyV-KC-cr5" id="dbN-rN-56K"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowRateViewController" id="vAA-Ta-WKB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivy-GM-QZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="760"/>
+            <point key="canvasLocation" x="1118" y="761"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yfd-0s-LQZ">
