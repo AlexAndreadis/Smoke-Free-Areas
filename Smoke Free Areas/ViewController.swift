@@ -26,27 +26,30 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     //Send button action
     @IBAction func saveBtn(_ sender: Any) {
-        
-        //Saving item to database
-        if commentTextField.text !=  "" && placeLabel.text != "Location"
-        {
-            
-            let place = placeLabel.text
-            
-            let key = dbRef!.child("placeLabel").childByAutoId().key
-            
-            
-            dbRef!.child(place!+"/placeLabel").child(key).setValue(place)
-            dbRef!.child(place!+"/comment").child(key).setValue(commentTextField.text)
-            dbRef!.child(place!+"/rating").child(key).setValue(ratingControl.rating)
-            
-            commentTextField.text = ""
-            //alert
-            createAlert(title: "Thank you!", message: "Review submitted.")
-            self.navigationController?.popViewController(animated: true)
+        let fieldTextLength = commentTextField.text!.characters.count
+        if  fieldTextLength < 40 {
+            createAlert(title: "Too short review", message: "Please say more, add details and help non-smokers.\nMininmum characters:40")
         }else{
-            //alert
-            createAlert(title: "Why don't write a review?", message: "Please write a review.")
+            //Saving item to database
+            if commentTextField.text !=  "" && placeLabel.text != "Location"
+            {
+            
+                let place = placeLabel.text
+            
+                let key = dbRef!.child("placeLabel").childByAutoId().key
+            
+            
+                dbRef!.child(place!+"/placeLabel").child(key).setValue(place)
+                dbRef!.child(place!+"/comment").child(key).setValue(commentTextField.text)
+                dbRef!.child(place!+"/rating").child(key).setValue(ratingControl.rating)
+            
+                commentTextField.text = ""
+                //alert
+                createAlert(title: "Thank you!", message: "Review submitted.")
+                self.navigationController?.popViewController(animated: true)
+            }else{
+                print("Error saving to database. :saveBtn")
+            }
         }
         
     }
@@ -54,6 +57,7 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
+        
         return true
     }
     
@@ -81,6 +85,5 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         placeLabel.text = placeLabelString
   
     }
-    
 
 }
