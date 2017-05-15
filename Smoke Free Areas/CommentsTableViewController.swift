@@ -23,15 +23,6 @@ class CommentsTableViewController: UITableViewController {
     // handler
     var handle:FIRDatabaseHandle?
     
-    
-    //MARK: Navigation
-    @IBAction func cancel(_ sender: UIBarButtonItem)
-    {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()

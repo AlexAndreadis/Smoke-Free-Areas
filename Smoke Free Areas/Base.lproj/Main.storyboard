@@ -53,12 +53,12 @@
                     <navigationItem key="navigationItem" title="Reviews" id="MTd-ye-IEN"/>
                     <connections>
                         <outlet property="placesTableView" destination="2Se-w2-GkP" id="8SP-iT-c6a"/>
-                        <segue destination="shn-6s-JT0" kind="presentation" identifier="ShowCommentsTableViewController" id="Ejd-V4-7gP"/>
+                        <segue destination="Q0s-vZ-XDG" kind="show" identifier="ShowCommentsTableViewController" id="ffi-ri-yEg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9RU-36-OSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="36"/>
+            <point key="canvasLocation" x="1047" y="36"/>
         </scene>
         <!--Comments-->
         <scene sceneID="yTL-4H-Kfo">
@@ -110,20 +110,14 @@
                             <outlet property="delegate" destination="Q0s-vZ-XDG" id="mUU-mp-0Ua"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Comments" id="isx-Qs-SQk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1Pi-Dx-Odk">
-                            <connections>
-                                <action selector="cancel:" destination="Q0s-vZ-XDG" id="gq3-3o-mfx"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Comments" id="isx-Qs-SQk"/>
                     <connections>
                         <outlet property="commentsTableView" destination="jvd-SO-01W" id="jjr-Z8-HiB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2l-MC-Z7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2898.4000000000001" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1961" y="36"/>
         </scene>
         <!--Write a Review-->
         <scene sceneID="tne-QT-ifu">
@@ -279,24 +273,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1p-34-ONq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188" y="758"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2SP-KS-5ok">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="shn-6s-JT0" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3t6-qt-Bhx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Q0s-vZ-XDG" kind="relationship" relationship="rootViewController" id="F5Q-5B-u4g"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fR0-qF-RDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1959.2" y="36.431784107946029"/>
         </scene>
     </scenes>
     <resources>

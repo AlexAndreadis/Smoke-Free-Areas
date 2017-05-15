@@ -50,7 +50,12 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         }
         
     }
-   
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
     
     // alert function
     func createAlert (title: String, message: String)
