@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>626177188463-6frdob2o76ekfspe3b4gtmlgu9977ili.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.626177188463-6frdob2o76ekfspe3b4gtmlgu9977ili</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCecGRQce_awh7VrpezMfNl9noij5ugu_o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>626177188463</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.aleand.Smoke-Free-Areas</string>
+	<key>PROJECT_ID</key>
+	<string>akapnapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>akapnapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:626177188463:ios:c9ac8b5afb347a2b</string>
+	<key>DATABASE_URL</key>
+	<string>https://akapnapp.firebaseio.com</string>
+</dict>
+</plist>

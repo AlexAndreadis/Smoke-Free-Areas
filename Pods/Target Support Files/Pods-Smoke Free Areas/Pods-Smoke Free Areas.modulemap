@@ -1,0 +1,6 @@
+framework module Pods_Smoke_Free_Areas {
+  umbrella header "Pods-Smoke Free Areas-umbrella.h"
+
+  export *
+  module * { export * }
+}
