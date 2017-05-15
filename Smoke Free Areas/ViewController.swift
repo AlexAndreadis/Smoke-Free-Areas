@@ -46,8 +46,9 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
             self.navigationController?.popViewController(animated: true)
         }else{
             //alert
-            createAlert(title: "", message: "Please pick a location from the map and write a review.")
+            createAlert(title: "Why don't write a review?", message: "Please write a review.")
         }
+        
     }
    
     

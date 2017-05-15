@@ -53,29 +53,56 @@
                     <navigationItem key="navigationItem" title="Reviews" id="MTd-ye-IEN"/>
                     <connections>
                         <outlet property="placesTableView" destination="2Se-w2-GkP" id="8SP-iT-c6a"/>
-                        <segue destination="Q0s-vZ-XDG" kind="show" identifier="ShowCommentsTableViewController" id="Ejd-V4-7gP"/>
+                        <segue destination="shn-6s-JT0" kind="presentation" identifier="ShowCommentsTableViewController" id="Ejd-V4-7gP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9RU-36-OSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117.5999999999999" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1100" y="36"/>
         </scene>
         <!--Comments-->
         <scene sceneID="yTL-4H-Kfo">
             <objects>
                 <tableViewController title="Comments" id="Q0s-vZ-XDG" customClass="CommentsTableViewController" customModule="Smoke_Free_Areas" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="jvd-SO-01W">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="jvd-SO-01W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DdO-Dw-xn7">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsTableViewCell" rowHeight="92" id="DdO-Dw-xn7" customClass="CommentsTableViewCell" customModule="Smoke_Free_Areas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DdO-Dw-xn7" id="A5p-bv-rEu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnF-yB-Vl9">
+                                            <rect key="frame" x="8" y="8" width="13.5" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OQN-Nj-mXq">
+                                            <rect key="frame" x="21.5" y="0.0" width="353.5" height="92"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="OQN-Nj-mXq" secondAttribute="trailing" id="2hp-jE-TnT"/>
+                                        <constraint firstAttribute="bottom" secondItem="OQN-Nj-mXq" secondAttribute="bottom" id="ntJ-KW-lo5"/>
+                                        <constraint firstItem="OQN-Nj-mXq" firstAttribute="top" secondItem="A5p-bv-rEu" secondAttribute="top" id="q4C-sm-Pn2"/>
+                                        <constraint firstItem="OQN-Nj-mXq" firstAttribute="leading" secondItem="LnF-yB-Vl9" secondAttribute="trailing" id="ral-MP-oFQ"/>
+                                        <constraint firstItem="LnF-yB-Vl9" firstAttribute="leading" secondItem="A5p-bv-rEu" secondAttribute="leadingMargin" id="roD-NC-SyN"/>
+                                        <constraint firstItem="LnF-yB-Vl9" firstAttribute="top" secondItem="A5p-bv-rEu" secondAttribute="topMargin" id="zOG-Sl-3VX"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentField" destination="OQN-Nj-mXq" id="81s-W7-FkW"/>
+                                    <outlet property="numberLabel" destination="LnF-yB-Vl9" id="QRk-cP-L7c"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -83,10 +110,20 @@
                             <outlet property="delegate" destination="Q0s-vZ-XDG" id="mUU-mp-0Ua"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Comments" id="isx-Qs-SQk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1Pi-Dx-Odk">
+                            <connections>
+                                <action selector="cancel:" destination="Q0s-vZ-XDG" id="gq3-3o-mfx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="commentsTableView" destination="jvd-SO-01W" id="jjr-Z8-HiB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2l-MC-Z7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="38"/>
+            <point key="canvasLocation" x="2898.4000000000001" y="36.431784107946029"/>
         </scene>
         <!--Write a Review-->
         <scene sceneID="tne-QT-ifu">
@@ -131,6 +168,7 @@
                             <constraint firstItem="BuB-gf-DwP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="aKZ-CG-Svh"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Write a Review" id="IWd-Ot-Zh4">
                         <barButtonItem key="rightBarButtonItem" title="Send" id="IQC-OA-1RT">
                             <connections>
@@ -138,6 +176,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="commentTextField" destination="dqY-MK-DYq" id="8Kv-MY-GV5"/>
                         <outlet property="placeLabel" destination="q8C-I3-nxW" id="zgD-NZ-Dyx"/>
@@ -146,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2079" y="761"/>
+            <point key="canvasLocation" x="1962" y="758"/>
         </scene>
         <!--Pick a place-->
         <scene sceneID="V5N-Uj-LaC">
@@ -183,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivy-GM-QZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1118" y="761"/>
+            <point key="canvasLocation" x="1100" y="758"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yfd-0s-LQZ">
@@ -209,7 +248,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fhN-FY-ghJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="topRated" id="hXs-MB-4pD"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CCK-xy-2JR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CCK-xy-2JR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -220,7 +259,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujN-du-A2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188" y="37.331334332833585"/>
+            <point key="canvasLocation" x="188" y="36"/>
         </scene>
         <!--Map-->
         <scene sceneID="Pdg-YR-8gt">
@@ -228,7 +267,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bji-NI-cLM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="tabBarMap" id="qEb-80-5TB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZsP-hq-4db">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZsP-hq-4db">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -239,7 +278,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1p-34-ONq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="207" y="761"/>
+            <point key="canvasLocation" x="188" y="758"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2SP-KS-5ok">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="shn-6s-JT0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3t6-qt-Bhx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q0s-vZ-XDG" kind="relationship" relationship="rootViewController" id="F5Q-5B-u4g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fR0-qF-RDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959.2" y="36.431784107946029"/>
         </scene>
     </scenes>
     <resources>
