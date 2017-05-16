@@ -16,8 +16,9 @@ class PlacesTableViewController: UITableViewController {
     
     //database reference
     var dbRef:FIRDatabaseReference?
-    
     var places = [Places]()
+    var valueToPass:String!
+    let cellIdentifier = "PlacesTableViewCell"
     
     private var loadedLabels = [String: String]()
     private var loadedRatings = [String: Int]()
@@ -58,7 +59,7 @@ class PlacesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         // Table view cells are reused and should be dequeued using a cell identifier.
-        let cellIdentifier = "PlacesTableViewCell"
+
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PlacesTableViewCell  else {
             fatalError("The dequeued cell is not an instance of PlacesTableView Cell.")
@@ -69,33 +70,50 @@ class PlacesTableViewController: UITableViewController {
         cell.placeLabel.text = place.name
         cell.ratingControl.rating = place.rating
         
-        
         return cell
 
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        self.performSegue(withIdentifier: "ShowCommentsTableViewController", sender: nil)
+        let indexPath = placesTableView.indexPathForSelectedRow
+        
+        let place = places[(indexPath?.row)!]
+        valueToPass = place.name
+        print(valueToPass)
+        
+        performSegue(withIdentifier: "ShowCommentsTableViewController", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowCommentsTableViewController") {
+            // initialize new view controller and cast it as your view controller
+            let viewController = segue.destination as! CommentsTableViewController
+            // will be stored in passedValue on the CommentsTableViewController
+            viewController.passedValue = valueToPass
+            //print (viewController.passedValue ?? "")
+        }
     }
     
     //MARK: Private Methods
     
     private func loadData()
     {
-        let place = "Dio Con Dio"
-        
-        dbRef!.child(place+"/placeLabel").observe(.childAdded, with: {
-            (snapshot) in
-            let label = snapshot.value as! String
-            self.updatePlace(snapshot.key, label: label)
+        dbRef!.observe(.childAdded, with: {
+            (placeSnapshot) in
+            //print("Adding place \(placeSnapshot.key)...")
+            
+            let labels = placeSnapshot.childSnapshot(forPath: "placeLabel")
+            
+            for (key, label) in labels.value as! [String: String] {
+                self.updatePlace(key, label: label)
+            }
+            let ratings = placeSnapshot.childSnapshot(forPath: "rating")
+            for (key, rating) in ratings.value as! [String: Int] {
+                self.updatePlace(key, rating: rating)
+            }
         })
-        dbRef!.child(place+"/rating").observe(.childAdded, with: {
-            (snapshot) in
-            let rating = snapshot.value as! Int
-            self.updatePlace(snapshot.key, rating: rating)
-        })
-        
         
     }
     
@@ -116,15 +134,5 @@ class PlacesTableViewController: UITableViewController {
             placesTableView.reloadData()
         }
     }
-    
-    /*func average(numbers: Int...) -> Int
-    {
-        var sum = 0
-        for number in numbers {
-            sum += number
-        }
-        let  ave : Int = Int(sum) / Int(numbers.count)
-        return ave
-    }*/
 
 }

@@ -15,6 +15,7 @@ class CommentsTableViewController: UITableViewController {
     @IBOutlet weak var commentsTableView: UITableView!
     
     var dbRef:FIRDatabaseReference?
+    var passedValue: String?
     
     var comments = [Comments]()
     
@@ -31,6 +32,7 @@ class CommentsTableViewController: UITableViewController {
         
         // Loads data to cell.
         loadData()
+        self.title = passedValue
         
     }
 
@@ -71,13 +73,13 @@ class CommentsTableViewController: UITableViewController {
     
     private func loadData()
     {
-        let place = "Dio Con Dio"
-        
-        dbRef!.child(place+"/comment").observe(.childAdded, with: {
+        let place = passedValue
+        dbRef!.child(place!+"/comment").observe(.childAdded, with: {
             (snapshot) in
             let label = snapshot.value as! String
             self.updatePlace(snapshot.key, label: label)
         })
+
         
     }
     
