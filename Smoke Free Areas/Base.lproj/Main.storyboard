@@ -64,16 +64,16 @@
         <scene sceneID="yTL-4H-Kfo">
             <objects>
                 <tableViewController title="Comments" id="Q0s-vZ-XDG" customClass="CommentsTableViewController" customModule="Smoke_Free_Areas" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="jvd-SO-01W">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="28" sectionFooterHeight="28" id="jvd-SO-01W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsTableViewCell" rowHeight="92" id="DdO-Dw-xn7" customClass="CommentsTableViewCell" customModule="Smoke_Free_Areas" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="92"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsTableViewCell" rowHeight="60" id="DdO-Dw-xn7" customClass="CommentsTableViewCell" customModule="Smoke_Free_Areas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DdO-Dw-xn7" id="A5p-bv-rEu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnF-yB-Vl9">
@@ -83,7 +83,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OQN-Nj-mXq">
-                                            <rect key="frame" x="21.5" y="0.0" width="353.5" height="92"/>
+                                            <rect key="frame" x="21.5" y="0.0" width="353.5" height="59.5"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -117,7 +117,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2l-MC-Z7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="36"/>
+            <point key="canvasLocation" x="1960.8" y="35.532233883058474"/>
         </scene>
         <!--Write a Review-->
         <scene sceneID="tne-QT-ifu">
@@ -132,34 +132,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BuB-gf-DwP">
-                                <rect key="frame" x="16" y="84" width="344" height="134.5"/>
+                                <rect key="frame" x="16" y="84" width="343" height="134.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8C-I3-nxW">
-                                        <rect key="frame" x="139.5" y="0.0" width="65.5" height="20.5"/>
+                                        <rect key="frame" x="139" y="0.0" width="65.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Review" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dqY-MK-DYq">
-                                        <rect key="frame" x="0.0" y="40.5" width="344" height="30"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Pf-WJ-5rX" customClass="RatingControl" customModule="Smoke_Free_Areas" customModuleProvider="target">
-                                        <rect key="frame" x="46" y="90.5" width="252" height="44"/>
+                                        <rect key="frame" x="45.5" y="90.5" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="3Pf-WJ-5rX" firstAttribute="leading" secondItem="BuB-gf-DwP" secondAttribute="leading" constant="46" id="22N-NJ-4NJ"/>
+                                    <constraint firstItem="dqY-MK-DYq" firstAttribute="leading" secondItem="BuB-gf-DwP" secondAttribute="leadingMargin" id="7H0-by-mPh"/>
                                     <constraint firstAttribute="trailing" secondItem="dqY-MK-DYq" secondAttribute="trailing" id="TQT-FW-XgA"/>
+                                    <constraint firstItem="dqY-MK-DYq" firstAttribute="trailing" secondItem="BuB-gf-DwP" secondAttribute="trailingMargin" id="VyV-7r-57a"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BuB-gf-DwP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1IZ-DT-6e3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BuB-gf-DwP" secondAttribute="trailing" id="CDf-8M-EkP"/>
                             <constraint firstItem="BuB-gf-DwP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="aKZ-CG-Svh"/>
+                            <constraint firstItem="BuB-gf-DwP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="i5V-Va-yXT"/>
+                            <constraint firstItem="BuB-gf-DwP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qSf-pJ-KHI"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
