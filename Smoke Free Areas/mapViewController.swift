@@ -30,12 +30,16 @@ class mapViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         let location = locations [0]
         
         //map zoomed
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.004, 0.004)
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.005, 0.005)
         //users location
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         
+        //let thessalonikiLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(40.6436100, 22.9308600)
+        
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
-        mapView.setRegion(region, animated: true)
+        mapView.setRegion(region, animated: false)
+        
+        
         
         self.mapView.showsUserLocation = true
     }
@@ -85,17 +89,18 @@ class mapViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     {
         super.viewDidLoad()
         
-        coreLocationManager.delegate = self
-        //desired accuracy is the best accuracy, very accurate data for the location
-        coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest
-        //request authorization from the user when user using my app
-        coreLocationManager.requestWhenInUseAuthorization()
-        
-        coreLocationManager.startUpdatingLocation()
+        mapView.addAnnotations(locations)
         
         mapView.delegate = self
         
-        mapView.addAnnotations(locations)
+        //desired accuracy is the best accuracy, very accurate data for the location
+        coreLocationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //request authorization from the user when user using my app
+        coreLocationManager.requestAlwaysAuthorization()
+        coreLocationManager.requestWhenInUseAuthorization()
+        coreLocationManager.startUpdatingLocation()
+        
+        coreLocationManager.delegate = self
     }
     
     // passing the name of the place on the next view controller which is the review view controller (RateViewController)

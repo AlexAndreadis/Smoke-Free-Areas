@@ -80,7 +80,6 @@ class PlacesTableViewController: UITableViewController {
         
         let place = places[(indexPath?.row)!]
         valueToPass = place.name
-        print(valueToPass)
         
         performSegue(withIdentifier: "ShowCommentsTableViewController", sender: self)
         
@@ -100,22 +99,50 @@ class PlacesTableViewController: UITableViewController {
     
     private func loadData()
     {
-        dbRef!.observe(.childAdded, with: {
+
+       /* dbRef!.observe(.childAdded, with: {
             (placeSnapshot) in
             //print("Adding place \(placeSnapshot.key)...")
             
             let labels = placeSnapshot.childSnapshot(forPath: "placeLabel")
             
-            for (key, label) in labels.value as! [String: String] {
+            for (key, label) in labels.value as! [String: String]
+            {
                 self.updatePlace(key, label: label)
+                
             }
+            
             let ratings = placeSnapshot.childSnapshot(forPath: "rating")
-            for (key, rating) in ratings.value as! [String: Int] {
+            for (key, rating) in ratings.value as! [String: Int]
+            {
+                
                 self.updatePlace(key, rating: rating)
+                
             }
+            
+        })*/
+        dbRef!.observe(.childAdded, with: {
+            (placeSnapshot) in
+        let parentRef = self.dbRef?.child(placeSnapshot.key)
+        let ratingRef = parentRef?.child("rating")
+        ratingRef?.observe(.value, with: { snapshot in
+            let count = snapshot.childrenCount
+            var total: Double = 0.0
+            for child in snapshot.children {
+                let snap = child as! FIRDataSnapshot
+                let val = snap.value as! Double
+                total += val
+            }
+            let average = total/Double(count)
+            print("Average for \(placeSnapshot.key) = \(Int(round(average)))")
+            
+            self.updatePlace("" , label: placeSnapshot.key, rating: Int(round(average)))
+            
+        })
         })
         
     }
+
     
     private func updatePlace(_ key: String, label: String? = nil, rating: Int? = nil)
     {
@@ -125,6 +152,7 @@ class PlacesTableViewController: UITableViewController {
         }
         if let rating = rating {
             loadedRatings[key] = rating
+            print
         }
         guard let label = loadedLabels[key], let rating = loadedRatings[key] else {
             return
@@ -134,5 +162,6 @@ class PlacesTableViewController: UITableViewController {
             placesTableView.reloadData()
         }
     }
+    
 
 }

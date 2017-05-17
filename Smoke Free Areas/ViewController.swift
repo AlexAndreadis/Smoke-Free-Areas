@@ -42,11 +42,11 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
                 dbRef!.child(place!+"/placeLabel").child(key).setValue(place)
                 dbRef!.child(place!+"/comment").child(key).setValue(commentTextField.text)
                 dbRef!.child(place!+"/rating").child(key).setValue(ratingControl.rating)
-            
+                
                 commentTextField.text = ""
                 //alert
                 createAlert(title: "Thank you!", message: "Review submitted.")
-                self.navigationController?.popViewController(animated: true)
+                //self.navigationController?.popViewController(animated: true)
             }else{
                 print("Error saving to database. :saveBtn")
             }

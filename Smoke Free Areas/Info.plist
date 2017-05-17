@@ -26,7 +26,7 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Hey! I want to know where you are.</string>
-	<key>NSLocationsAlwaysUsageDescription</key>
+	<key>NSLocationAlwaysUsageDescription</key>
 	<string>To update the map</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
