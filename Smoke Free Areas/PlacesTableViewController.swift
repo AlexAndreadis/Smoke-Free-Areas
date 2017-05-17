@@ -99,28 +99,6 @@ class PlacesTableViewController: UITableViewController {
     
     private func loadData()
     {
-
-       /* dbRef!.observe(.childAdded, with: {
-            (placeSnapshot) in
-            //print("Adding place \(placeSnapshot.key)...")
-            
-            let labels = placeSnapshot.childSnapshot(forPath: "placeLabel")
-            
-            for (key, label) in labels.value as! [String: String]
-            {
-                self.updatePlace(key, label: label)
-                
-            }
-            
-            let ratings = placeSnapshot.childSnapshot(forPath: "rating")
-            for (key, rating) in ratings.value as! [String: Int]
-            {
-                
-                self.updatePlace(key, rating: rating)
-                
-            }
-            
-        })*/
         dbRef!.observe(.childAdded, with: {
             (placeSnapshot) in
         let parentRef = self.dbRef?.child(placeSnapshot.key)
@@ -134,12 +112,34 @@ class PlacesTableViewController: UITableViewController {
                 total += val
             }
             let average = total/Double(count)
-            print("Average for \(placeSnapshot.key) = \(Int(round(average)))")
             
             self.updatePlace("" , label: placeSnapshot.key, rating: Int(round(average)))
             
         })
         })
+        
+        /*let placesRef = self.dbRef?.child("Akapnapp")
+        
+        placesRef?.observeSingleEvent(of: .value, with: { snapshot in
+            
+            for child in snapshot.children {
+                
+                let placeSnap = child as! FIRDataSnapshot
+                let ratingsSnap = placeSnap.childSnapshot(forPath: "rating")
+                
+                let count = ratingsSnap.childrenCount
+                var total: Double = 0.0
+                for child in ratingsSnap.children {
+                    print(child)
+                    let snap = child as! FIRDataSnapshot
+                    let val = snap.value as! Double
+                    total += val
+                }
+                let average = total/Double(count)
+                print (placeSnap)
+                print(" \(Int(round(average)))")
+            }
+        })*/
         
     }
 
@@ -152,7 +152,6 @@ class PlacesTableViewController: UITableViewController {
         }
         if let rating = rating {
             loadedRatings[key] = rating
-            print
         }
         guard let label = loadedLabels[key], let rating = loadedRatings[key] else {
             return
