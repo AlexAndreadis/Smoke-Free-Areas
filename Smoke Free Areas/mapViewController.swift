@@ -24,9 +24,10 @@ class mapViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     let coreLocationManager = CLLocationManager()
     let locations = LocationList().Location
     
-    // all locations will be stored on this array
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
+        // all locations will be stored on this array
         let location = locations [0]
         
         //map zoomed
@@ -34,12 +35,8 @@ class mapViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         //users location
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         
-        //let thessalonikiLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(40.6436100, 22.9308600)
-        
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
         mapView.setRegion(region, animated: false)
-        
-        
         
         self.mapView.showsUserLocation = true
     }
@@ -59,7 +56,7 @@ class mapViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
                 view.isEnabled = true
                 view.canShowCallout = true
                 
-                let reviewButton = UIButton(type: .detailDisclosure)
+                let reviewButton = UIButton(type: .contactAdd)
                 
                 view.rightCalloutAccessoryView = reviewButton
                 
@@ -79,8 +76,6 @@ class mapViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
         if let annotation = view.annotation as? Locations {
             annotationTouched = annotation.title ?? "No title"
         }
-        // after touching a pin i moves to next view controller
-        //self.performSegue(withIdentifier: "ShowRateViewController", sender: nil)
         
     }
 
