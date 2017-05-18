@@ -20,10 +20,8 @@ class mapViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     // MARK: MAP
     @IBOutlet weak var mapView: MKMapView!
 
-    
     let coreLocationManager = CLLocationManager()
     let locations = LocationList().Location
-    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {

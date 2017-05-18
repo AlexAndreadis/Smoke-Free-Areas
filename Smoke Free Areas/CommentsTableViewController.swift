@@ -79,20 +79,19 @@ class CommentsTableViewController: UITableViewController {
             let label = snapshot.value as! String
             self.updatePlace(snapshot.key, label: label)
         })
-
-        
     }
     
     private func updatePlace(_ key: String, label: String? = nil)
     {
-        if let label = label {
+        if let label = label
+        {
             loadedComments[key] = label
-            
         }
         guard let label = loadedComments[key] else {
             return
         }
-        if let comment = Comments(comment: label) {
+        if let comment = Comments(comment: label)
+        {
             comments.append(comment)
             commentsTableView.reloadData()
         }

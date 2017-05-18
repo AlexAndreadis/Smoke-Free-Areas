@@ -10,23 +10,25 @@ import UIKit
 
 @IBDesignable class RatingControl: UIStackView {
 
-    
     // MARK: Properties
     private var ratingButtons = [UIButton]()
     
     var rating = 0{
-        didSet {
+        didSet
+        {
             updateButtonSelectionStates()
         }
     }
     
     @IBInspectable var cigaretteSize: CGSize = CGSize(width: 44.0, height: 44.0){
-        didSet {
+        didSet
+        {
             setupButtons()
         }
     }
     @IBInspectable var cigaretteCount: Int = 5{
-        didSet {
+        didSet
+        {
             setupButtons()
         }
     }
@@ -47,7 +49,8 @@ import UIKit
         
         
         // clearing existing buttons
-        for button in ratingButtons {
+        for button in ratingButtons
+        {
             removeArrangedSubview(button)
             button.removeFromSuperview()
         }
@@ -59,7 +62,8 @@ import UIKit
         let emptyCigar = UIImage(named:"emptyCigar", in: bundle, compatibleWith: self.traitCollection)
         let highlightedCigar = UIImage(named:"highlightedCigar", in: bundle, compatibleWith: self.traitCollection)
         
-        for index in 0..<cigaretteCount {
+        for index in 0..<cigaretteCount
+        {
             
             //Create the button
             let button = UIButton()
@@ -90,14 +94,16 @@ import UIKit
     //MARK: Button Action
     
     func ratingButtonTapped(button: UIButton){
-        guard let index = ratingButtons.index(of: button) else {
+        guard let index = ratingButtons.index(of: button) else
+        {
             fatalError("The button, \(button), is not in the ratingButtons array: \(ratingButtons)")
         }
         
         // Calculate the rating of the selected button
         let selectedRating = index + 1
         
-        if selectedRating == rating {
+        if selectedRating == rating
+        {
             // If the selected cigar represents the current rating, reset the rating to 0.
             rating = 0
         } else {
@@ -107,13 +113,15 @@ import UIKit
         
     }
     private func updateButtonSelectionStates() {
-        for (index, button) in ratingButtons.enumerated() {
+        for (index, button) in ratingButtons.enumerated()
+        {
             // If the index of a button is less than the rating, that button should be selected.
             button.isSelected = index < rating
             
             // Set the hint string for the currently selected cigar
             let hintString: String?
-            if rating == index + 1 {
+            if rating == index + 1
+            {
                 hintString = "Tap to reset the rating to zero."
             } else {
                 hintString = nil

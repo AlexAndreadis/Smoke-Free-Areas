@@ -35,6 +35,5 @@ class LocationList: NSObject {
         Location += [Locations(name: "Tribeca - All Day & Night Bar",  lat: 40.631029, long: 22.942396)]
         Location += [Locations(name: "Taverna Tou Vaggeli",  lat: 40.613878, long: 23.099086)]
         Location += [Locations(name: "The Loco Bus",  lat: 40.632999, long: 22.939409)]
-        
     }
 }

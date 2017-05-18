@@ -49,7 +49,6 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
                 print("Error saving to database. :saveBtn")
             }
         }
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
