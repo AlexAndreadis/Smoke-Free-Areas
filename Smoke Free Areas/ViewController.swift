@@ -27,8 +27,8 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     //Send button action
     @IBAction func saveBtn(_ sender: Any) {
         let fieldTextLength = commentTextField.text!.characters.count
-        if  fieldTextLength < 40 {
-            createAlert(title: "Too short review", message: "Please say more, add details and help non-smokers.\nMininmum characters:40")
+        if  fieldTextLength < 20 {
+            createAlert(title: "Too short review", message: "Please say more, add details and help non-smokers.\nMininmum characters:20")
         }else{
             //Saving item to database
             if commentTextField.text !=  "" && placeLabel.text != "Location"
