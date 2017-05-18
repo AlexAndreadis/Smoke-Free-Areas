@@ -64,44 +64,53 @@
         <scene sceneID="yTL-4H-Kfo">
             <objects>
                 <tableViewController title="Comments" id="Q0s-vZ-XDG" customClass="CommentsTableViewController" customModule="Smoke_Free_Areas" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="28" sectionFooterHeight="28" id="jvd-SO-01W">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" id="jvd-SO-01W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsTableViewCell" rowHeight="60" id="DdO-Dw-xn7" customClass="CommentsTableViewCell" customModule="Smoke_Free_Areas" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentsTableViewCell" rowHeight="80" id="DdO-Dw-xn7" customClass="CommentsTableViewCell" customModule="Smoke_Free_Areas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DdO-Dw-xn7" id="A5p-bv-rEu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnF-yB-Vl9">
-                                            <rect key="frame" x="8" y="8" width="13.5" height="14.5"/>
+                                            <rect key="frame" x="8" y="8" width="14" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OQN-Nj-mXq">
-                                            <rect key="frame" x="21.5" y="0.0" width="353.5" height="59.5"/>
+                                            <rect key="frame" x="22" y="0.0" width="353" height="63"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 5/5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdm-F9-KnJ">
+                                            <rect key="frame" x="304" y="63" width="71" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="OQN-Nj-mXq" secondAttribute="trailing" id="2hp-jE-TnT"/>
-                                        <constraint firstAttribute="bottom" secondItem="OQN-Nj-mXq" secondAttribute="bottom" id="ntJ-KW-lo5"/>
-                                        <constraint firstItem="OQN-Nj-mXq" firstAttribute="top" secondItem="A5p-bv-rEu" secondAttribute="top" id="q4C-sm-Pn2"/>
-                                        <constraint firstItem="OQN-Nj-mXq" firstAttribute="leading" secondItem="LnF-yB-Vl9" secondAttribute="trailing" id="ral-MP-oFQ"/>
-                                        <constraint firstItem="LnF-yB-Vl9" firstAttribute="leading" secondItem="A5p-bv-rEu" secondAttribute="leadingMargin" id="roD-NC-SyN"/>
-                                        <constraint firstItem="LnF-yB-Vl9" firstAttribute="top" secondItem="A5p-bv-rEu" secondAttribute="topMargin" id="zOG-Sl-3VX"/>
+                                        <constraint firstAttribute="bottom" secondItem="Tdm-F9-KnJ" secondAttribute="bottom" id="7Xx-6F-AV4"/>
+                                        <constraint firstItem="OQN-Nj-mXq" firstAttribute="leading" secondItem="LnF-yB-Vl9" secondAttribute="trailing" id="J8g-RS-xo4"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tdm-F9-KnJ" secondAttribute="trailing" id="V0v-ZU-STM"/>
+                                        <constraint firstItem="OQN-Nj-mXq" firstAttribute="top" secondItem="A5p-bv-rEu" secondAttribute="top" id="WBX-F3-Csj"/>
+                                        <constraint firstAttribute="trailing" secondItem="OQN-Nj-mXq" secondAttribute="trailing" id="biM-Ec-6KB"/>
+                                        <constraint firstItem="LnF-yB-Vl9" firstAttribute="top" secondItem="A5p-bv-rEu" secondAttribute="topMargin" id="dUf-SE-A7M"/>
+                                        <constraint firstItem="Tdm-F9-KnJ" firstAttribute="top" secondItem="OQN-Nj-mXq" secondAttribute="bottom" id="rN0-7s-Ivt"/>
+                                        <constraint firstItem="LnF-yB-Vl9" firstAttribute="leading" secondItem="A5p-bv-rEu" secondAttribute="leadingMargin" id="s8U-f8-Dbc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="commentField" destination="OQN-Nj-mXq" id="81s-W7-FkW"/>
                                     <outlet property="numberLabel" destination="LnF-yB-Vl9" id="QRk-cP-L7c"/>
+                                    <outlet property="ratingLabel" destination="Tdm-F9-KnJ" id="zYj-ms-RXg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

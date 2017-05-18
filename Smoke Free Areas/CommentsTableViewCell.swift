@@ -13,6 +13,7 @@ class CommentsTableViewCell: UITableViewCell, UITableViewDelegate {
     //MARK: Properties
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var commentField: UITextView!
+    @IBOutlet weak var ratingLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

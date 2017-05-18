@@ -20,6 +20,7 @@ class CommentsTableViewController: UITableViewController {
     var comments = [Comments]()
     
     private var loadedComments = [String: String]()
+    private var loadedRatings = [String: Int]()
     
     // handler
     var handle:FIRDatabaseHandle?
@@ -67,6 +68,7 @@ class CommentsTableViewController: UITableViewController {
         cell.commentField.text = comment.comment
         cell.numberLabel.text = String(format: "#%i", indexPath.row+1)
         cell.commentField.isEditable = false
+        cell.ratingLabel.text = String("Rating: \(comment.rating)/5")
 
         return cell
     }
@@ -79,18 +81,27 @@ class CommentsTableViewController: UITableViewController {
             let label = snapshot.value as! String
             self.updatePlace(snapshot.key, label: label)
         })
+        dbRef!.child(place!+"/rating").observe(.childAdded, with: {
+            (snapshot) in
+            let rating = snapshot.value as! Int
+            self.updatePlace(snapshot.key, rating: rating)
+        })
     }
     
-    private func updatePlace(_ key: String, label: String? = nil)
+    private func updatePlace(_ key: String, label: String? = nil, rating: Int? = nil)
     {
         if let label = label
         {
             loadedComments[key] = label
         }
-        guard let label = loadedComments[key] else {
+        if let rating = rating
+        {
+            loadedRatings[key] = rating
+        }
+        guard let label = loadedComments[key], let rating = loadedRatings[key] else {
             return
         }
-        if let comment = Comments(comment: label)
+        if let comment = Comments(comment: label, rating: rating)
         {
             comments.append(comment)
             commentsTableView.reloadData()

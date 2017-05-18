@@ -91,7 +91,6 @@ class PlacesTableViewController: UITableViewController {
             let viewController = segue.destination as! CommentsTableViewController
             // will be stored in passedValue on the CommentsTableViewController
             viewController.passedValue = valueToPass
-            //print (viewController.passedValue ?? "")
         }
     }
     
@@ -118,8 +117,6 @@ class PlacesTableViewController: UITableViewController {
                     
                 }
                 let average = total/Double(count)
-
-                print("\(placeSnap.key) \(Int(round(average)))")
                 self.updatePlace("" , label: placeSnap.key, rating: Int(round(average)))
             }
         })
