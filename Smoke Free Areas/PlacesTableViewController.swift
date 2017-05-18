@@ -99,47 +99,30 @@ class PlacesTableViewController: UITableViewController {
     
     private func loadData()
     {
-        dbRef!.observe(.childAdded, with: {
-            (placeSnapshot) in
-        let parentRef = self.dbRef?.child(placeSnapshot.key)
-        let ratingRef = parentRef?.child("rating")
-        ratingRef?.observe(.value, with: { snapshot in
-            let count = snapshot.childrenCount
-            var total: Double = 0.0
-            for child in snapshot.children {
-                let snap = child as! FIRDataSnapshot
-                let val = snap.value as! Double
-                total += val
-            }
-            let average = total/Double(count)
-            
-            self.updatePlace("" , label: placeSnapshot.key, rating: Int(round(average)))
-            
-        })
-        })
         
-        /*let placesRef = self.dbRef?.child("Akapnapp")
-        
-        placesRef?.observeSingleEvent(of: .value, with: { snapshot in
+        let placesRef = self.dbRef?.child("/")
+        placesRef!.observeSingleEvent(of: .value, with: { snapshot in
             
             for child in snapshot.children {
-                
+            
                 let placeSnap = child as! FIRDataSnapshot
                 let ratingsSnap = placeSnap.childSnapshot(forPath: "rating")
                 
                 let count = ratingsSnap.childrenCount
                 var total: Double = 0.0
                 for child in ratingsSnap.children {
-                    print(child)
+    
                     let snap = child as! FIRDataSnapshot
                     let val = snap.value as! Double
                     total += val
+                    
                 }
                 let average = total/Double(count)
-                print (placeSnap)
-                print(" \(Int(round(average)))")
+
+                print("\(placeSnap.key) \(Int(round(average)))")
+                self.updatePlace("" , label: placeSnap.key, rating: Int(round(average)))
             }
-        })*/
+        })
         
     }
 
@@ -161,6 +144,6 @@ class PlacesTableViewController: UITableViewController {
             placesTableView.reloadData()
         }
     }
-    
+
 
 }

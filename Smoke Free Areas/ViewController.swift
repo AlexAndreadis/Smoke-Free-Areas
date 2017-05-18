@@ -33,20 +33,18 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
             //Saving item to database
             if commentTextField.text !=  "" && placeLabel.text != "Location"
             {
-            
                 let place = placeLabel.text
             
                 let key = dbRef!.child("placeLabel").childByAutoId().key
-            
-            
+
                 dbRef!.child(place!+"/placeLabel").child(key).setValue(place)
-                dbRef!.child(place!+"/comment").child(key).setValue(commentTextField.text)
                 dbRef!.child(place!+"/rating").child(key).setValue(ratingControl.rating)
-                
-                commentTextField.text = ""
+                dbRef!.child(place!+"/comment").child(key).setValue(commentTextField.text)
+            
                 //alert
                 createAlert(title: "Thank you!", message: "Review submitted.")
-                //self.navigationController?.popViewController(animated: true)
+                commentTextField.text = ""
+                self.navigationController?.popViewController(animated: false)
             }else{
                 print("Error saving to database. :saveBtn")
             }
