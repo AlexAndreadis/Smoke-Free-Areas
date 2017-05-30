@@ -6,12 +6,12 @@
 //  Copyright © 2017 Alexandros Andreadis. All rights reserved.
 //
 
+
 import UIKit
-import MapKit
-import CoreLocation
 import FirebaseDatabase
 
-class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+
+class RateViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate{
     
     //MARK: Properties
     @IBOutlet weak var commentTextField: UITextField!
@@ -30,7 +30,7 @@ class RateViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         if  fieldTextLength < 20 {
             createAlert(title: "Too short review", message: "Please say more, add details and help non-smokers.\nMininmum characters:20")
         }else{
-            //Saving item to database
+            //Saving data to database
             if commentTextField.text !=  "" && placeLabel.text != "Location"
             {
                 let place = placeLabel.text

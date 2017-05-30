@@ -10,19 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class mapViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
+class mapViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, MKMapViewDelegate {
     
     // MARK: Properties
     let pin = UIImage(named: "pin")
     var annotationTouched = String()
-    var viaSegue = MKAnnotationView()
+    //var viaSegue = MKAnnotationView()
     
     // MARK: MAP
     @IBOutlet weak var mapView: MKMapView!
 
     let coreLocationManager = CLLocationManager()
     let locations = LocationList().Location
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         // all locations will be stored on this array
@@ -43,21 +43,21 @@ class mapViewController: UIViewController, UITextFieldDelegate, UIImagePickerCon
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
     {
         
-        
         if let annotation = annotation as? Locations{
             if let view = mapView.dequeueReusableAnnotationView(withIdentifier: annotation.identifier){
                 return view
             }else{
+
                 let gesture = UITapGestureRecognizer(target: self, action: #selector(calloutTapped(sender:)))
                 let view = MKAnnotationView(annotation: annotation, reuseIdentifier: annotation.identifier)
                 view.image = pin
                 view.isEnabled = true
                 view.canShowCallout = true
-                
+                // callout button 
                 let reviewButton = UIButton(type: .contactAdd)
-                
+                //callout
                 view.rightCalloutAccessoryView = reviewButton
-                
+                //adding gesture
                 reviewButton.addGestureRecognizer(gesture)
                 
                 return view
