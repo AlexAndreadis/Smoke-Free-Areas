@@ -122,7 +122,7 @@ class PlacesTableViewController: UITableViewController {
         })
         
     }
-
+    
     
     private func updatePlace(_ key: String, label: String? = nil, rating: Int? = nil)
     {
@@ -141,6 +141,4 @@ class PlacesTableViewController: UITableViewController {
             placesTableView.reloadData()
         }
     }
-
-
 }
